@@ -1,7 +1,7 @@
 #include <stdio.h>
+#include <stdbool.h>
 
 int Work_1(){
-    //Задача №1
     int a, b, res;
     scanf("%d%d", &a, &b);
     if(a >= 0 && b <= 100){
@@ -12,7 +12,7 @@ int Work_1(){
         printf("Are you dumb?");
     };
     return 0;
-}
+};
 
 int Work_2(){
     int a, b, res;
@@ -27,7 +27,7 @@ int Work_2(){
         printf("Are you dumb?");
     };
     return 0;
-}
+};
 
 int Work_3(){
 
@@ -39,9 +39,9 @@ int Work_3(){
             res += i;
         };
         printf("%d\n", res);
-    }
+    };
     return 0;
-}
+};
 
 int Work_4(){
     int side_a, side_b, side_c, res;
@@ -54,7 +54,7 @@ int Work_4(){
     };
 
     return 0;
-}
+};
 
 int Work_5(){
     int size;
@@ -64,23 +64,53 @@ int Work_5(){
     int Mass[size];
      for(int i = 0; i < size; i++){
         scanf("%d", &Mass[i]);
-    }
+    };
     
     for(int i = 0; i < size; i++){
         if(Mass[i] % 2 == 0){
             sum += Mass[i];
-        }
-    }
+        };
+    };
     printf("%d\n\t", sum);
     
     return 0;
-}
+};
+
+bool Work_6(){
+    int num;
+    scanf("%d" ,&num);
+
+    if(num >= 1 && num <= 10000){
+        for(int i = 2; i < num; i++){
+            if(num % i == 0){
+                printf("NO");
+                return false;
+            }else{
+                printf("YES\n");
+                return true;
+            };
+        };
+    };
+};
+
+int Work_7(){
+    double num_1, num_2;
+    scanf("%lf%lf", &num_1, &num_2);
+
+    if(num_1 <= 10000 && num_2 <= 10000){
+        printf();
+    }
+    else
+        printf("Are you wining son?");
+ return 0;
+};
 
 int main(){
     //Work_1();
     //Work_2();
     //Work_3();
     //Work_4();
-    Work_5();
+    //Work_5();
+    //Work_6();
     return 0;
 }

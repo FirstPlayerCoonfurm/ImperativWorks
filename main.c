@@ -48,11 +48,31 @@ int Work_4(){
     scanf("%d%d%d", &side_a, &side_b, &side_c);
 
     if(side_a < 0 || side_b < 0 || side_c < 0)
-        printf("Are you wining son?");
+        printf("%d", -1);
     else{
         printf("%d\n", 2*((side_a * side_b) + (side_b * side_c) + (side_a * side_c)));
     };
 
+    return 0;
+}
+
+int Work_5(){
+    int size;
+    int num;
+    int sum = 0;
+    scanf("%d", &size);
+    int Mass[size];
+     for(int i = 0; i < size; i++){
+        scanf("%d", &Mass[i]);
+    }
+    
+    for(int i = 0; i < size; i++){
+        if(Mass[i] % 2 == 0){
+            sum += Mass[i];
+        }
+    }
+    printf("%d\n\t", sum);
+    
     return 0;
 }
 
@@ -61,5 +81,6 @@ int main(){
     //Work_2();
     //Work_3();
     //Work_4();
+    Work_5();
     return 0;
 }

@@ -108,20 +108,20 @@ int Work_8(){
      for(int i = 0; i < size; i++){
         scanf("%d", &Mass[i]);
     };
-    int min_num, max_num = Mass[0];
-    int index_min, index_max = 0;
+    int min_num = Mass[0], max_num = Mass[0];
+    int index_min = 0, index_max = 0;
 
     for(int i = 0; i < size; i++){
         if(Mass[i] < min_num){
             min_num = Mass[i];
             index_min = i;
-        }
+        };
         if(Mass[i] > max_num){
             max_num = Mass[i];
             index_max = i;
-        }
-    }
-    printf("%d%d%d%d\n", min_num, index_min, max_num, index_max);
+        };
+    };
+    printf("%d %d %d %d\n", min_num, index_min + 1, max_num, index_max + 1);
 };
 
 int Work_9(){
@@ -129,10 +129,25 @@ int Work_9(){
 
     scanf("%d%d%d%d%d", &N, &M, &P, &K, &L);
     if(N > 500)
-        printf("Are you wining?");
+        printf("Are you wining?"); 
+};
 
-    
-}
+int Work_10(){
+    int hour, minut, sec, addTime;
+    scanf("%d%d%d%d", &hour, &minut, &sec, &addTime);
+    sec = sec + addTime;
+    if(hour >= 23)
+        hour = hour - 24;
+    if(minut >= 59){
+        hour += 1;
+        minut = minut  - 60;
+    }
+    if(sec >= 59){
+        minut += 1;
+        sec = sec - 60;
+    }
+    printf("%d:%d:%d\n", hour, minut, sec);
+};
 
 
 int main(){
@@ -143,7 +158,8 @@ int main(){
     //Work_5();
     //Work_6();
     //Work_7();
-    //Work_8();
-    Work_9();
+    Work_8();
+    //Work_9();
+    //Work_10();
     return 0;
 }
